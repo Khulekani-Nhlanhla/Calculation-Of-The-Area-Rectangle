@@ -1,19 +1,26 @@
-public class AreaOfRectangle {
-    public static double sideHeight;
-    public static double sideBase;
-    public static double areaOfRectangle;
+import java.util.Scanner;
 
-    public static void getData(double b, double h){
-         sideHeight = h;
-         sideBase = b;
+public class AreaOfRectangle {
+     double sideHeight;
+     double sideBase;
+     double areaOfRectangle;
+
+    public void getData(){
+        Scanner Sc = new Scanner(System.in);
+        System.out.println("This program calculates the area of a triangle.(base * height)/2");
+        System.out.println("Please enter the size of base:");
+        sideBase = Sc.nextInt();
+        System.out.println("Please enter the size of height:");
+        sideHeight = Sc.nextInt();
+
 
     }
 
-    public static double computeField(){
-        areaOfRectangle = ((sideHeight*sideBase)/2);
+    public double computeField(){
+        areaOfRectangle = sideBase * sideHeight;
         return areaOfRectangle;
     }
-    public static  void fieldDisplay(){
+    public void fieldDisplay(){
         System.out.println("The area of this triangle is: " + computeField());
     }
 }
